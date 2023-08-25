@@ -147,9 +147,9 @@
                         </a>
                     </li>
 					<li class="nav-item">
-						<a class="nav-link {{activeRoute('dashboard.adsense.index')}}" href="{{route('dashboard.adsense.index')}}" >
+						<a class="nav-link {{activeRoute('dashboard.user.adsense.index')}}" href="{{route('dashboard.user.adsense.index')}}" >
 						<span class="nav-link-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path> <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path> <path d="M15 15l3.35 3.35"></path> <path d="M9 15l-3.35 3.35"></path> <path d="M5.65 5.65l3.35 3.35"></path> <path d="M18.35 5.65l-3.35 3.35"></path> </svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"></path> <path d="M9 7l6 0"></path> <path d="M9 11l6 0"></path> <path d="M9 15l4 0"></path> </svg>
 						</span>
 							<span class="flex items-center transition-[opacity,transform] nav-link-title grow">
 							{{__('AdSense')}}

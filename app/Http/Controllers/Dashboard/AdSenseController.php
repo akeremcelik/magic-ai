@@ -33,7 +33,7 @@ class AdSenseController extends Controller
     {
         AdSense::query()->create($request->validated());
 
-        return response()->redirectToRoute('dashboard.adsense.index');
+        return response()->redirectToRoute('dashboard.user.adsense.index');
     }
 
     public function update(UpdateAdSenseRequest $request, int $id)
@@ -41,7 +41,7 @@ class AdSenseController extends Controller
         $adSense = AdSense::query()->findOrFail($id);
         $adSense->update($request->validated());
 
-        return response()->redirectToRoute('dashboard.adsense.index');
+        return response()->redirectToRoute('dashboard.user.adsense.index');
     }
 
     public function delete(int $id)
@@ -49,6 +49,6 @@ class AdSenseController extends Controller
         $adSense = AdSense::query()->findOrFail($id);
         $adSense->delete();
 
-        return response()->redirectToRoute('dashboard.adsense.index');
+        return response()->redirectToRoute('dashboard.user.adsense.index');
     }
 }

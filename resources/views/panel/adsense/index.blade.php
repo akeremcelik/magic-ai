@@ -25,7 +25,7 @@
     <div class="page-body pt-6">
         <div class="container-xl">
             <div class="mb-3">
-                <a href="{{route('dashboard.adsense.create')}}"
+                <a href="{{route('dashboard.user.adsense.create')}}"
                    class="btn btn-success m-2">{{__('Create New AdSense')}}</a>
             </div>
             <div class="card">
@@ -45,10 +45,10 @@
                                 <td>{{$entry->code}}</td>
                                 <td class="flex">
                                     <div class="mr-1">
-                                        <a class="btn btn-info" href="{{ route('dashboard.adsense.show', ['id' => $entry->id]) }}">Update</a>
+                                        <a class="btn btn-info" href="{{ route('dashboard.user.adsense.show', ['id' => $entry->id]) }}">Update</a>
                                     </div>
                                     <div>
-                                        <form action="{{ route('dashboard.adsense.delete', ['id' => $entry->id]) }}" method="POST">
+                                        <form action="{{ route('dashboard.user.adsense.delete', ['id' => $entry->id]) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger" type="submit">

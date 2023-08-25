@@ -24,13 +24,13 @@
     <!-- Page body -->
     <div class="page-body pt-6">
         <div class="container-xl">
-            <form action="{{ route('dashboard.adsense.update', ['id' => $item->id]) }}" method="POST">
+            <form action="{{ route('dashboard.user.adsense.update', ['id' => $item->id]) }}" method="POST">
                 @csrf
                 @method('PATCH')
                 <div>
                     <label>Code</label>
                     <div>
-                        <textarea class="w-full" rows="5" name="code">{{ $item->code }}</textarea>
+                        <textarea class="w-full rounded p-2" rows="5" name="code">{{ $item->code }}</textarea>
                     </div>
                 </div>
                 <button class="btn btn-info" type="submit">Update</button>

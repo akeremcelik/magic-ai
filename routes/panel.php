@@ -126,7 +126,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
             });
 
 
-
+            Route::prefix('adsense')->name('adsense.')->group(function () {
+                Route::get('/', [AdSenseController::class, 'index'])->name('index');
+                Route::get('/create', [AdSenseController::class, 'create'])->name('create');
+                Route::get('/{id}', [AdSenseController::class, 'show'])->name('show');
+                Route::post('/', [AdSenseController::class, 'store'])->name('store');
+                Route::patch('/{id}', [AdSenseController::class, 'update'])->name('update');
+                Route::delete('/{id}', [AdSenseController::class, 'delete'])->name('delete');
+            });
 
         });
 
@@ -339,15 +346,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
 
             Route::get('/requests/{ticket_id}', [SupportController::class, 'viewTicket'])->name('view');
             Route::post('/requests-action/send-message', [SupportController::class, 'viewTicketSendMessage']);
-        });
-
-        Route::prefix('adsense')->name('adsense.')->group(function () {
-            Route::get('/', [AdSenseController::class, 'index'])->name('index');
-            Route::get('/create', [AdSenseController::class, 'create'])->name('create');
-            Route::get('/{id}', [AdSenseController::class, 'show'])->name('show');
-            Route::post('/', [AdSenseController::class, 'store'])->name('store');
-            Route::patch('/{id}', [AdSenseController::class, 'update'])->name('update');
-            Route::delete('/{id}', [AdSenseController::class, 'delete'])->name('delete');
         });
 
         //Pages
