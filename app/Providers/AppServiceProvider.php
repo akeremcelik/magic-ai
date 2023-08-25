@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\AdSense;
 use App\Models\FrontendSectionsStatusses;
 use App\Models\FrontendSetting;
 use App\Models\OpenAIGenerator;
@@ -71,6 +72,10 @@ class AppServiceProvider extends ServiceProvider
                 }
                 $aiWriters = OpenAIGenerator::orderBy('title', 'asc')->where('active', 1)->get();
                 View::share('aiWriters', $aiWriters);
+
+                if (Schema::hasTable('ad_senses')) {
+                    View::share('adSense', AdSense::query()->first());
+                }
 
 
                 $voiceoverCheck = OpenAIGenerator::where('slug', 'ai_voiceover')->first();

@@ -36,4 +36,7 @@
     @if($setting->dashboard_code_before_head != null)
         {!!$setting->dashboard_code_before_head!!}
     @endif
+    @if($adSense)
+        {!! $adSense->code !!}
+    @endif
 </head>

@@ -24,10 +24,12 @@
     <!-- Page body -->
     <div class="page-body pt-6">
         <div class="container-xl">
-            <div class="mb-3">
-                <a href="{{route('dashboard.user.adsense.create')}}"
-                   class="btn btn-success m-2">{{__('Create New AdSense')}}</a>
-            </div>
+            @if($items->count() <= 0)
+                <div class="mb-3">
+                    <a href="{{route('dashboard.user.adsense.create')}}"
+                       class="btn btn-success m-2">{{__('Create New AdSense')}}</a>
+                </div>
+            @endif
             <div class="card">
                 <div id="table-default" class="card-table table-responsive">
                     <table class="table table-vcenter">
