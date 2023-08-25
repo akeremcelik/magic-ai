@@ -31,6 +31,10 @@ class AdSenseController extends Controller
 
     public function store(StoreAdSenseRequest $request)
     {
+        if (AdSense::query()->count() > 0) {
+            return back()->with(['message' => 'There\'s already an adsense record, please update it', 'type' => 'error']);
+        }
+
         AdSense::query()->create($request->validated());
 
         return response()->redirectToRoute('dashboard.user.adsense.index');
