@@ -129,7 +129,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
             Route::prefix('adsense')->name('adsense.')->group(function () {
                 Route::get('/', [AdSenseController::class, 'index'])->name('index');
                 Route::get('/create', [AdSenseController::class, 'create'])->name('create');
-                Route::get('/{id}', [AdSenseController::class, 'show'])->name('show');
+                Route::get('/{id}/edit', [AdSenseController::class, 'edit'])->name('edit');
                 Route::post('/', [AdSenseController::class, 'store'])->name('store');
                 Route::patch('/{id}', [AdSenseController::class, 'update'])->name('update');
                 Route::delete('/{id}', [AdSenseController::class, 'delete'])->name('delete');

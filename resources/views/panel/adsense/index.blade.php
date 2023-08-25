@@ -47,7 +47,7 @@
                                 <td>{{$entry->code}}</td>
                                 <td class="flex">
                                     <div class="mr-1">
-                                        <a class="btn btn-info" href="{{ route('dashboard.user.adsense.show', ['id' => $entry->id]) }}">Update</a>
+                                        <a class="btn btn-info" href="{{ route('dashboard.user.adsense.edit', ['id' => $entry->id]) }}">Update</a>
                                     </div>
                                     <div>
                                         <form action="{{ route('dashboard.user.adsense.delete', ['id' => $entry->id]) }}" method="POST">

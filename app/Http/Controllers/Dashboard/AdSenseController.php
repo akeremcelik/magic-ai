@@ -22,11 +22,11 @@ class AdSenseController extends Controller
         return view('panel.adsense.create');
     }
 
-    public function show(int $id)
+    public function edit(int $id)
     {
         $item = AdSense::query()->findOrFail($id);
 
-        return view('panel.adsense.show', compact('item'));
+        return view('panel.adsense.edit', compact('item'));
     }
 
     public function store(StoreAdSenseRequest $request)
